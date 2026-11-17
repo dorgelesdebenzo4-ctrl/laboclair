@@ -14,9 +14,22 @@ export function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2">
       <svg viewBox="0 0 512 512" className="h-8 w-8" aria-hidden>
-        <rect width="512" height="512" rx="112" fill="#136d92" />
-        <path d="M206 120h100v24h-14v86l84 140c14 24-3 52-31 52H167c-28 0-45-28-31-52l84-140v-86h-14z" fill="#fff" />
-        <path d="M168 330h176l26 44c5 8-1 18-10 18H152c-9 0-15-10-10-18z" fill="#7fd1ef" />
+        <defs>
+          <linearGradient id="lc-bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#1b88b3" />
+            <stop offset="1" stopColor="#0b4f6c" />
+          </linearGradient>
+          <linearGradient id="lc-liq" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#8ee3ff" />
+            <stop offset="1" stopColor="#3fc1e8" />
+          </linearGradient>
+        </defs>
+        <rect width="512" height="512" rx="116" fill="url(#lc-bg)" />
+        <path d="M212 112h88a10 10 0 0 1 0 20h-6v92l86 146c16 27-4 62-36 62H180c-32 0-52-35-36-62l86-146v-92h-6a10 10 0 0 1 0-20z" fill="#fff" />
+        <path d="M176 330h160l30 51c7 12-2 27-16 27H162c-14 0-23-15-16-27z" fill="url(#lc-liq)" />
+        <circle cx="232" cy="360" r="11" fill="#fff" opacity=".9" />
+        <circle cx="270" cy="378" r="7" fill="#fff" opacity=".8" />
+        <path d="M372 104l10 24 24 10-24 10-10 24-10-24-24-10 24-10z" fill="#ffd166" />
       </svg>
       <span className="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
         Labo<span className="text-labo-500">Clair</span>
